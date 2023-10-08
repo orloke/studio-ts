@@ -1,6 +1,4 @@
 import { type Metadata } from 'next'
-import Image from 'next/image'
-import Link from 'next/link'
 
 import { ContactSection } from '@/components/ContactSection'
 import { Container } from '@/components/Container'
@@ -8,9 +6,7 @@ import { FadeIn, FadeInStagger } from '@/components/FadeIn'
 import { List, ListItem } from '@/components/List'
 import { SectionIntro } from '@/components/SectionIntro'
 import { StylizedImage } from '@/components/StylizedImage'
-import { Testimonial } from '@/components/Testimonial'
 import imageLaptop from '@/images/laptop.jpg'
-import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
 
 const clients = [
   ['Google Analytics'],
@@ -42,7 +38,7 @@ function Clients() {
               <li key={client}>
                 <FadeIn>
                   {/* <Image className='w-[11.5rem] h-9' width={184} height={36} src={logo} alt={client} unoptimized /> */}
-                  <b className='text-white font-extrabold text-4xl'>{client}</b>
+                  <b className="text-4xl font-extrabold text-white">{client}</b>
                 </FadeIn>
               </li>
             ))}
@@ -53,77 +49,18 @@ function Clients() {
   )
 }
 
-function CaseStudies({
-  caseStudies,
-}: {
-  caseStudies: Array<MDXEntry<CaseStudy>>
-}) {
-  return (
-    <>
-      <SectionIntro
-        title="Harnessing technology for a brighter future"
-        className="mt-24 sm:mt-32 lg:mt-40"
-      >
-        <p>
-          We believe technology is the answer to the world’s greatest
-          challenges. It’s also the cause, so we find ourselves in bit of a
-          catch 22 situation.
-        </p>
-      </SectionIntro>
-      <Container className="mt-16">
-        <FadeInStagger className="grid grid-cols-1 gap-8 lg:grid-cols-3">
-          {caseStudies.map((caseStudy) => (
-            <FadeIn key={caseStudy.href} className="flex">
-              <article className="relative flex w-full flex-col rounded-3xl p-6 ring-1 ring-neutral-950/5 transition hover:bg-neutral-50 sm:p-8">
-                <h3>
-                  <Link href={caseStudy.href}>
-                    <span className="absolute inset-0 rounded-3xl" />
-                    <Image
-                      src={caseStudy.logo}
-                      alt={caseStudy.client}
-                      className="h-16 w-16"
-                      unoptimized
-                    />
-                  </Link>
-                </h3>
-                <p className="mt-6 flex gap-x-2 text-sm text-neutral-950">
-                  <time
-                    dateTime={caseStudy.date.split('-')[0]}
-                    className="font-semibold"
-                  >
-                    {caseStudy.date.split('-')[0]}
-                  </time>
-                  <span className="text-neutral-300" aria-hidden="true">
-                    /
-                  </span>
-                  <span>Case study</span>
-                </p>
-                <p className="mt-6 font-display text-2xl font-semibold text-neutral-950">
-                  {caseStudy.title}
-                </p>
-                <p className="mt-4 text-base text-neutral-600">
-                  {caseStudy.description}
-                </p>
-              </article>
-            </FadeIn>
-          ))}
-        </FadeInStagger>
-      </Container>
-    </>
-  )
-}
-
 function Services() {
   return (
     <>
       <SectionIntro
-        eyebrow="Services"
-        title="We help you identify, explore and respond to new opportunities."
+        eyebrow="Serviços"
+        title="Ajudamos você a identificar, explorar e responder a novas oportunidades."
         className="mt-24 sm:mt-32 lg:mt-40"
       >
         <p>
-          As long as those opportunities involve giving us money to re-purpose
-          old projects — we can come up with an endless number of those.
+          Descubra, aproveite e responda a oportunidades com nossa assistência
+          especializada, garantindo que você esteja sempre um passo à frente na
+          busca pelo sucesso.
         </p>
       </SectionIntro>
       <Container className="mt-16">
@@ -138,24 +75,27 @@ function Services() {
             </FadeIn>
           </div>
           <List className="mt-16 lg:mt-0 lg:w-1/2 lg:min-w-[33rem] lg:pl-4">
-            <ListItem title="Web development">
-              We specialise in crafting beautiful, high quality marketing pages.
-              The rest of the website will be a shell that uses lorem ipsum
-              everywhere.
+            <ListItem title="Desenvolvimento Web">
+              Somos especialistas em criar sites intuitivos e eficientes que
+              transformam visitantes em clientes, atendendo às suas necessidades
+              e às de seu público.
             </ListItem>
-            <ListItem title="Application development">
-              We have a team of skilled developers who are experts in the latest
-              app frameworks, like Angular 1 and Google Web Toolkit.
+            <ListItem title="Desenvolvimento de Aplicações">
+              Desenvolvemos seu site seguindo as mais rigorosas políticas de
+              segurança e privacidade, além de adotar as recomendações dos
+              principais especialistas em desenvolvimento web em todo o mundo.
             </ListItem>
-            <ListItem title="E-commerce">
-              We are at the forefront of modern e-commerce development. Which
-              mainly means adding your logo to the Shopify store template we’ve
-              used for the past six years.
+            <ListItem title="Tráfego">
+              Nossa equipe de especialistas em tráfego trabalha diariamente para
+              aprimorar, medir e otimizar o fluxo para o seu negócio,
+              impulsionando seu crescimento constante
             </ListItem>
-            <ListItem title="Custom content management">
-              At Studio we understand the importance of having a robust and
-              customised CMS. That’s why we run all of our client projects out
-              of a single, enormous Joomla instance.
+            <ListItem title="Aperfeiçoamento Contínuo">
+              Nossa dedicação à melhoria contínua é evidente em nosso
+              compromisso de aperfeiçoar constantemente seus sites e estratégias
+              de tráfego pago. Estamos focados em impulsionar seu sucesso
+              digital, otimizando cada aspecto do seu negócio online dia após
+              dia
             </ListItem>
           </List>
         </div>
@@ -170,8 +110,6 @@ export const metadata: Metadata = {
 }
 
 export default async function Home() {
-  let caseStudies = (await loadCaseStudies()).slice(0, 3)
-
   return (
     <>
       <Container className="mt-24 sm:mt-32 md:mt-56">
@@ -180,9 +118,6 @@ export default async function Home() {
             Desbloqueie o potencial da sua presença na web.
           </h1>
           <p className="mt-6 text-xl text-neutral-600">
-            {/* We are a development studio working at the intersection of design
-            and technology. It’s a really busy intersection though — a lot of
-            our staff have been involved in hit and runs. */}
             Nosso compromisso é proporcionar resultados mensuráveis na internet.
             Ajudamos você a alcançar seus objetivos, aumentar sua visibilidade
             e, o mais importante, sua receita.
@@ -191,17 +126,6 @@ export default async function Home() {
       </Container>
 
       <Clients />
-
-      {/* <CaseStudies caseStudies={caseStudies} />
-
-      <Testimonial
-        className="mt-24 sm:mt-32 lg:mt-40"
-        client={{ name: 'Phobia', logo: logoPhobiaDark }}
-      >
-        The team at Studio went above and beyond with our onboarding, even
-        finding a way to access the user’s microphone without triggering one of
-        those annoying permission dialogs.
-      </Testimonial> */}
 
       <Services />
 
