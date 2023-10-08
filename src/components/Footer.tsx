@@ -3,38 +3,37 @@ import Link from 'next/link'
 import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
 import { Logo } from '@/components/Logo'
-import { socialMediaProfiles } from '@/components/SocialMedia'
 
 const navigation = [
-  {
-    title: 'Work',
-    links: [
-      { title: 'FamilyFund', href: '/work/family-fund' },
-      { title: 'Unseal', href: '/work/unseal' },
-      { title: 'Phobia', href: '/work/phobia' },
-      {
-        title: (
-          <>
-            See all <span aria-hidden="true">&rarr;</span>
-          </>
-        ),
-        href: '/work',
-      },
-    ],
-  },
+  // {
+  //   title: 'Work',
+  //   links: [
+  //     { title: 'FamilyFund', href: '/work/family-fund' },
+  //     { title: 'Unseal', href: '/work/unseal' },
+  //     { title: 'Phobia', href: '/work/phobia' },
+  //     {
+  //       title: (
+  //         <>
+  //           See all <span aria-hidden="true">&rarr;</span>
+  //         </>
+  //       ),
+  //       href: '/work',
+  //     },
+  //   ],
+  // },
   {
     title: 'Company',
     links: [
-      { title: 'About', href: '/about' },
-      { title: 'Process', href: '/process' },
-      { title: 'Blog', href: '/blog' },
-      { title: 'Contato', href: '/contact' },
+      { title: 'Sobre Nós', href: '/about' },
+      { title: 'Nosso Processo', href: '/process' },
+      // { title: 'Blog', href: '/blog' },
+      // { title: 'Contato', href: '/contact' },
     ],
   },
-  {
-    title: 'Connect',
-    links: socialMediaProfiles,
-  },
+  // {
+  //   title: 'Connect',
+  //   links: socialMediaProfiles,
+  // },
 ]
 
 function Navigation() {
@@ -82,16 +81,16 @@ function NewsletterForm() {
   return (
     <form className="max-w-sm">
       <h2 className="font-display text-sm font-semibold tracking-wider text-neutral-950">
-        Sign up for our newsletter
+        Assine a nossa newsletter
       </h2>
       <p className="mt-4 text-sm text-neutral-700">
-        Subscribe to get the latest design news, articles, resources and
-        inspiration.
+        Inscreva-se para receber as últimas notícias, artigos, recursos e
+        inspiração sobre design.
       </p>
       <div className="relative mt-6">
         <input
           type="email"
-          placeholder="Email address"
+          placeholder="Email"
           autoComplete="email"
           aria-label="Email address"
           className="block w-full rounded-2xl border border-neutral-300 bg-transparent py-4 pl-6 pr-20 text-base/6 text-neutral-950 ring-4 ring-transparent transition placeholder:text-neutral-500 focus:border-neutral-950 focus:outline-none focus:ring-neutral-950/5"
