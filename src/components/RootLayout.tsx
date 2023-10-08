@@ -84,7 +84,7 @@ function Header({
           <Button href="/contact" invert={invert}>
             Contato
           </Button>
-          <button
+          {/* <button
             ref={toggleRef}
             type="button"
             onClick={onToggle}
@@ -104,7 +104,7 @@ function Header({
                   : 'fill-neutral-950 group-hover:fill-neutral-700',
               )}
             />
-          </button>
+          </button> */}
         </div>
       </div>
     </Container>
@@ -263,7 +263,7 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
           className="relative isolate flex w-full flex-col pt-9"
         >
           <GridPattern
-            className="absolute inset-x-0 -top-14 -z-10 h-[1000px] w-full stroke-neutral-950/5 [mask-image:linear-gradient(to_bottom_left,white_40%,transparent_50%)]"
+            className="absolute inset-x-0 -top-14 -z-10 fill-neutral-50 lg:fill-black h-[1000px] w-full stroke-neutral-950/5 [mask-image:linear-gradient(to_bottom_left,white_40%,transparent_50%)]"
             yOffset={-96}
             interactive
           />
