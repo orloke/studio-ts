@@ -24,10 +24,10 @@ const navigation = [
   {
     title: 'Company',
     links: [
-      { title: 'Sobre Nós', href: '/about' },
-      { title: 'Nosso Processo', href: '/process' },
+      // { title: 'Sobre Nós', href: '/about' },
+      // { title: 'Nosso Processo', href: '/process' },
       // { title: 'Blog', href: '/blog' },
-      // { title: 'Contato', href: '/contact' },
+      { title: 'Contato', href: '/contact' },
     ],
   },
   // {
@@ -113,9 +113,9 @@ export function Footer() {
   return (
     <Container as="footer" className="mt-24 w-full sm:mt-32 lg:mt-40">
       <FadeIn>
-        <div className="grid grid-cols-1 gap-x-8 gap-y-16 lg:grid-cols-2">
-          <Navigation />
-          <div className="flex lg:justify-end">
+        <div className="grid grid-cols-1 gap-x-8 gap-y-16">
+          {/* <Navigation /> */}
+          <div className="flex lg:justify-start">
             <NewsletterForm />
           </div>
         </div>
