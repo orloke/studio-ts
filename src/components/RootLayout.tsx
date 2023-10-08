@@ -1,5 +1,9 @@
 'use client'
 
+import clsx from 'clsx'
+import { MotionConfig, motion, useReducedMotion } from 'framer-motion'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import {
   createContext,
   useContext,
@@ -8,10 +12,6 @@ import {
   useRef,
   useState,
 } from 'react'
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
-import clsx from 'clsx'
-import { motion, MotionConfig, useReducedMotion } from 'framer-motion'
 
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
@@ -82,7 +82,7 @@ function Header({
         </Link>
         <div className="flex items-center gap-x-8">
           <Button href="/contact" invert={invert}>
-            Contact us
+            Contato
           </Button>
           <button
             ref={toggleRef}
@@ -143,13 +143,13 @@ function Navigation() {
   return (
     <nav className="mt-px font-display text-5xl font-medium tracking-tight text-white">
       <NavigationRow>
-        <NavigationItem href="/work">Our Work</NavigationItem>
-        <NavigationItem href="/about">About Us</NavigationItem>
+        {/* <NavigationItem href="/work">Our Work</NavigationItem> */}
+        <NavigationItem href="/process">Nosso Processo</NavigationItem>
+        <NavigationItem href="/about">Sobre Nós</NavigationItem>
       </NavigationRow>
-      <NavigationRow>
-        <NavigationItem href="/process">Our Process</NavigationItem>
+      {/* <NavigationRow>
         <NavigationItem href="/blog">Blog</NavigationItem>
-      </NavigationRow>
+      </NavigationRow> */}
     </nav>
   )
 }
@@ -228,7 +228,7 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
               />
             </div>
             <Navigation />
-            <div className="relative bg-neutral-950 before:absolute before:inset-x-0 before:top-0 before:h-px before:bg-neutral-800">
+            {/* <div className="relative bg-neutral-950 before:absolute before:inset-x-0 before:top-0 before:h-px before:bg-neutral-800">
               <Container>
                 <div className="grid grid-cols-1 gap-y-10 pb-16 pt-10 sm:grid-cols-2 sm:pt-16">
                   <div>
@@ -248,7 +248,7 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
                   </div>
                 </div>
               </Container>
-            </div>
+            </div> */}
           </motion.div>
         </motion.div>
       </header>

@@ -1,6 +1,6 @@
-import { useId } from 'react'
 import { type Metadata } from 'next'
 import Link from 'next/link'
+import { useId } from 'react'
 
 import { Border } from '@/components/Border'
 import { Button } from '@/components/Button'
@@ -141,14 +141,14 @@ function ContactDetails() {
 }
 
 export const metadata: Metadata = {
-  title: 'Contact Us',
+  title: 'Contato',
   description: 'Let’s work together. We can’t wait to hear from you.',
 }
 
 export default function Contact() {
   return (
     <>
-      <PageIntro eyebrow="Contact us" title="Let’s work together">
+      <PageIntro eyebrow="Contato" title="Let’s work together">
         <p>We can’t wait to hear from you.</p>
       </PageIntro>
 
