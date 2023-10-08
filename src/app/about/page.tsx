@@ -28,27 +28,26 @@ function Culture() {
   return (
     <div className="mt-24 rounded-4xl bg-neutral-950 py-24 sm:mt-32 lg:mt-40 lg:py-32">
       <SectionIntro
-        eyebrow="Our culture"
-        title="Balance your passion with your passion for life."
+        eyebrow="Nossa Cultura"
+        title="Uma busca incansável para impulsionar seus resultados."
         invert
       >
         <p>
-          We are a group of like-minded people who share the same core values.
+          Na essência do nosso trabalho reside uma busca incansável pela
+          excelência, para que você possa alavancar seus resultados e atingir
+          novos patamares de sucesso.
         </p>
       </SectionIntro>
       <Container className="mt-16">
         <GridList>
-          <GridListItem title="Loyalty" invert>
-            Our team has been with us since the beginning because none of them
-            are allowed to have LinkedIn profiles.
+          <GridListItem title="Lealdade" invert>
+            Nossa lealdade inabalável é o fio condutor de parcerias duradouras.
           </GridListItem>
-          <GridListItem title="Trust" invert>
-            We don’t care when our team works just as long as they are working
-            every waking second.
+          <GridListItem title="Confiança" invert>
+            Construímos confiança por meio de ações, não apenas palavras.
           </GridListItem>
-          <GridListItem title="Compassion" invert>
-            You never know what someone is going through at home and we make
-            sure to never find out.
+          <GridListItem title="Paixão" invert>
+            Guiados pela paixão, transformamos ideias em realidade.
           </GridListItem>
         </GridList>
       </Container>
@@ -189,44 +188,50 @@ export default async function About() {
 
   return (
     <>
-      <PageIntro eyebrow="About us" title="Our strength is collaboration">
+      <PageIntro eyebrow="Sobre Nós" title="Nossa força é a colaboração">
         <p>
-          We believe that our strength lies in our collaborative approach, which
-          puts our clients at the center of everything we do.
+          Acreditamos que a nossa força reside na nossa abordagem colaborativa,
+          que coloca os nossos clientes no centro de tudo o que fazemos.
         </p>
         <div className="mt-10 max-w-2xl space-y-6 text-base">
           <p>
-            Studio was started by three friends who noticed that developer
-            studios were charging clients double what an in-house team would
-            cost. Since the beginning, we have been committed to doing things
-            differently by charging triple instead.
+            Este projeto começou a partir de uma visão clara e apaixonada.
+            Observamos a vasta quantidade de negócios que ainda não exploram
+            todo o potencial da internet, deixando passar inúmeras oportunidades
+            de crescimento e alcance.
           </p>
           <p>
-            At Studio, we’re more than just colleagues — we’re a family. This
-            means we pay very little and expect people to work late. We want our
-            employees to bring their whole selves to work. In return, we just
-            ask that they keep themselves there until at least 6:30pm.
+            Acreditamos que cada empreendimento merece a chance de prosperar
+            online, e é por isso que iniciamos esta jornada. Estamos
+            comprometidos em ajudar empresas de todos os tamanhos a conquistarem
+            o sucesso na era digital, desbloqueando um mundo de possibilidades.
           </p>
         </div>
       </PageIntro>
       <Container className="mt-16">
         <StatList>
-          <StatListItem value="35" label="Underpaid employees" />
-          <StatListItem value="52" label="Placated clients" />
-          <StatListItem value="$25M" label="Invoices billed" />
+          <StatListItem value="5 bilhoes" label="de pessoas usam a internet" />
+          <StatListItem
+            value="3,5 bilhões"
+            label="de pesquisas no google por dia"
+          />
+          <StatListItem
+            value="100%"
+            label="é o quanto sua receita pode aumentar"
+          />
         </StatList>
       </Container>
 
       <Culture />
 
-      <Team />
+      {/* <Team /> */}
 
-      <PageLinks
+      {/* <PageLinks
         className="mt-24 sm:mt-32 lg:mt-40"
         title="From the blog"
         intro="Our team of experienced designers and developers has just one thing on their mind; working on your ideas to draw a smile on the face of your users worldwide. From conducting Brand Sprints to UX Design."
         pages={blogArticles}
-      />
+      /> */}
 
       <ContactSection />
     </>
